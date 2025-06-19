@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@font-face {
+  font-display: swap; 
+  font-family: 'kulim';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./kulim-park-v14-latin-regular.woff2') format('woff2');
+}
+
+@theme {
+    --font-default: 'kulim';
+    --color-text: #bba0ca;
+    --color-fill: #272727;
+    --color-white: #F4F4F5;
+}
