@@ -5,7 +5,7 @@
   font-family: 'kulim';
   font-style: normal;
   font-weight: 400;
-  src: url('./kulim-park-v14-latin-regular.woff2') format('woff2');
+  src: url('./assets/kulim-park-v14-latin-regular.woff2') format('woff2');
 }
 
 @theme {
