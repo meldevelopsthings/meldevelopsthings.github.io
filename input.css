@@ -9,8 +9,17 @@
 }
 
 @theme {
-    --font-default: 'kulim';
     --color-text: #bba0ca;
     --color-fill: #272727;
     --color-white: #F4F4F5;
+    --color-lilac: #D1C8E1;
+}
+
+@layer base {
+  html {
+    margin: 0;
+    font-family: 'kulim';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 }
