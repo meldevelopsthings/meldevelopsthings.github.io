@@ -11,7 +11,7 @@
     <nav class="flex fixed top-0 w-full bg-fill text-white text-[22px] h-9">
         <div class="flex ml-4">Melody Gannon</div>
         <div class="flex-1/3 ml-2 my-0.5">
-            <img src="./assets/dark.svg" class=""></img>
+            <img src="./assets/dark.svg" class="">
         </div>
         <div class="flex mr-4">About</div>
         <div class="flex mr-4">Skills</div>
@@ -19,7 +19,7 @@
         <div class="flex mr-4">Contact</div>
     </nav>
     <!-- Title section -->
-    <div class="m-auto my-85">
+    <div class="m-auto my-100">
         <h1 class="text-5xl text-center p-2">Welcome to my website!</h1>
         <h2 class="text-text text-5xl text-center p-2">Here, you'll find an archive of everything I've been up to.</h2>
         <h1 class="text-5xl text-center p-2">I hope you enjoy!<h1>
@@ -31,28 +31,60 @@
     </div>
     <!-- Skills section -->
     <h1 class="text-text text-5xl text-center pt-40">Skills</h1>
-    <div class="grid grid-cols-2 text-center mx-50 mt-20">
-        <div class="bg-lilac rounded-2xl shadow-md w-200">
-            <h1 class="text-4xl">Tailwind CSS</h1>
-            <p class="text-2xl">Since focusing more on web development in university, I wanted to learn how to make my websites look a lot nicer. After asking around, I landed on trying Tailwind CSS and have been using it since. It proves useful by saving a lot of time by simply just letting me write html classes for CSS styling, instead of having to have a seperate file open and switching back and forth each time I want to edit the style.</p>
+    <div class="grid grid-cols-2 gap-25 text-center mx-50 mt-20">
+        <div class="bg-lilac rounded-2xl shadow-md w-155">
+            <h1 class="text-5xl mt-12">Tailwind CSS</h1>
+            <p class="text-2xl mt-8 pb-10 px-6">Since focusing more on web development in university, I wanted to learn how to make my websites look a lot nicer. After asking around, I landed on trying Tailwind CSS and have been using it since, helping to save time with styling websites.</p>
         </div>
-        <div>
-            <h1>C#</h1>
-            <p>meow meow moew</p>
+        <div class="bg-lilac rounded-2xl shadow-md w-155 mx-21">
+            <h1 class="text-5xl mt-12">C#</h1>
+            <p class="text-2xl mt-8 pb-10 px-6">I have been using C# since around 2021 as I picked it up during college. I have a good amount of experience in using this language and am comfortable with object oriented programming.</p>
         </div>
-        <div>
-            <h1>PHP</h1>
-            <p>meow meow moew</p>
+        <div class="bg-lilac rounded-2xl shadow-md w-155">
+            <h1 class="text-5xl mt-12">PHP</h1>
+            <p class="text-2xl mt-8 pb-10 px-6">A very useful tool for interactions between a website and a database hosted on it, especially for larger scale projects. This technology has been used in most of my university projects.</p>
         </div>
-        <div>
-            <h1>Linux</h1>
-            <p>meow meow moew</p>
+        <div class="bg-lilac rounded-2xl shadow-md w-155 mx-21">
+            <h1 class="text-5xl mt-12">Git</h1>
+            <p class="text-2xl mt-8 pb-10 px-6">Collaboration and general cloud management is difficult without the correct tools, so I learned Git for university when group work was required more. A much needed change to help with development across multiple machines with differing versions.</p>
         </div>
-        <div class="col-span-2">
-            <h1>Git</h1>
-            <p>meow meow moew</p>
+        <div class="bg-lilac rounded-2xl shadow-md max-w-250 col-span-2 m-auto">
+            <h1 class="text-5xl mt-12">Javascript</h1>
+            <p class="text-2xl mt-8 pb-10 px-6">Another very useful technology for websites, allowing dynamically updating content without the refreshing of the site itself. You can see this for yourself in this website with the different themes!</p>
         </div>
     </div>
-    <!-- :3 -->
+    <!-- Projects section -->
+    <h1 class="text-text text-5xl text-center pt-40">Projects</h1>
+    <div>
+        <h1 class="text-text text-5xl text-center pt-40">Clairvoyance Task Manager</h1>
+        <img src="./assets/clairvoyancemain.png" class="max-w-300 m-auto border-text border-10 rounded-2xl mt-10">
+        <div class="mx-50 mt-20 bg-lilac rounded-2xl text-center shadow-md">
+            <p class="text-fill text-[32px] p-10">Clairvoyance is a task management software that I designed for my university course. It is a web application made using a simple stack of HTML, Tailwind CSS, PHP and Javascript. The app uses a drag and drop functionality to allow for the sorting of tasks between multiple different lists at a time, under a kanban board view which can allow users to monitor their progress incrementally. <br><br> The main features are defined primarily by CRUD, allowing the user to interact with the app and its database through an authentication system. This system requires users to sign up to the app before they use it, but allows a lot of options for task management for anyone who does.</p>
+        </div>
+    </div>
+    <div>
+        <h1 class="text-text text-5xl text-center pt-40">iLet4You CRM System</h1>
+        <img src="./assets/ilet4youmain.png" class="max-w-300 m-auto border-text border-10 rounded-2xl mt-10">
+        <div class="mx-50 mt-20 bg-lilac rounded-2xl text-center shadow-md">
+            <p class="text-fill text-[32px] p-10">iLet4You is a letting agency based in Sheffield who, through my university course, tasked a group of us to collaborate and create a CRM system for them using C# and Winforms. This software was required to be a CRUD application that could function on an Intranet, which would allow the agency to manage their properties, landlords and tenants and all information regarding them. This would include things like a tenants rental data, like how much rent they have paid. <br><br> In the end, iLet4You was happy with what we provided in the end. We were even chosen by our university to showcase it at an event!</p>
+        </div>
+    </div>
+    <!-- Links section -->
+     <div>
+        <h1 class="text-text text-5xl text-center pt-40">Contact</h1>
+        <div class="grid grid-cols-2 gap-25 text-center mx-50 mt-20">
+            <div class="bg-lilac rounded-2xl shadow-md w-100 mx-52">
+                <img src="./assets/mail.svg" class="m-auto mt-8">
+                <p class="text-2xl mt-8 pb-10 px-6">meldevelops@proton.me</p>
+            </div>
+            <div class="bg-lilac rounded-2xl shadow-md w-100 mx-26">
+                <img src="./assets/github.svg" class="m-auto mt-8">
+                <p class="text-2xl mt-8 pb-10 px-6">@meldevelopsthings</p>
+            </div>
+        </div>
+     </div>
+     <div class="bg-fill sticky w-full mt-25">
+        <p class="text-center text-white">Made by Melody Gannon</p>
+     </div>
 </body>
 </html>
