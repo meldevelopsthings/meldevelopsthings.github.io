@@ -13,6 +13,7 @@
     --color-fill: #272727;
     --color-white: #F4F4F5;
     --color-lilac: #D1C8E1;
+    --breakpoint-lg: 70rem;
 }
 
 @layer base {
