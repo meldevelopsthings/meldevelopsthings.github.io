@@ -16,13 +16,14 @@
             <img src="./assets/dark.svg" class="">
         </div>
         <!-- Menu button for mobile devices -->
-        <button id="menuToggle" class="lg:hidden m-auto mr-4" onclick="menuClick()">
+        <button id="menuToggle" class="lg:hidden m-auto mr-4" onclick="menuToggle(), menuClick()">
             <img src="./assets/menu.svg">
         </button>
         <div class="lg:flex hidden">
             <a href="#about">
                 <div class="lg:flex mr-4">About</div>
             </a>
+            <div class="w-full"></div>
             <a href="#skills">
                 <div class="lg:flex mr-4">Skills</div>
             </a>
@@ -34,19 +35,25 @@
             </a>
         </div>
     </nav>
-    <div id="mobileLinks" class="h-screen w-full fixed top-15 bg-fill hidden text-white text-5xl text-center overflow-hidden">
-        <a href="#about" onclick="menuClick()">
-            <div class="relative top-10">About</div>
-        </a>
-        <a href="#skills" onclick="menuClick()">
-            <div class="relative top-10">Skills</div>
-        </a>
-        <a href="#projects" onclick="menuClick()">
-            <div class="relative top-10">Projects</div>
-        </a>
-        <a href="#links" onclick="menuClick()">
-            <div class="relative top-10">Links</div>
-        </a>
+    <!-- MOBILE MENU HERE!!! EDIT IT HERE NOT ABOVE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+    <div id="mobileLinks" class="flex-col h-screen w-full fixed top-15 bg-fill hidden text-white text-5xl text-center overflow-hidden z-10">
+        <div class="m-5">
+            <a href="#about" onclick="menuClick()">
+                <div class="relative my-15 w-full">About</div>
+                <div class="w-full border-lightFill border rounded-full shadow-md"></div>
+            </a>
+            <a href="#skills" onclick="menuClick()">
+                <div class="relative my-15 w-full">Skills</div>
+                <div class="w-full border-lightFill border rounded-full shadow-md"></div>
+            </a>
+            <a href="#projects" onclick="menuClick()">
+                <div class="relative my-15 w-full">Projects</div>
+                <div class="w-full border-lightFill border rounded-full shadow-md"></div>
+            </a>
+            <a href="#links" onclick="menuClick()">
+                <div class="relative my-15 w-full">Links</div>
+            </a>
+        </div>
     </div>
     <!-- Title section -->
     <div id="home" class="flex flex-wrap items-center h-screen">

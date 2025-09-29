@@ -1,13 +1,17 @@
 function menuClick() {
     const click = document.getElementById("mobileLinks");
 
-    if (click.style.display === "grid") {
-        document.getElementById("menuToggle").src = './assets/menu.svg';
+    if (click.style.display === "flex") {
         click.style.display = "none";
     } else {
-        document.getElementById("menuToggle").src = './assets/exit.svg';
-        click.style.display = "grid";
+        click.style.display = "flex";
     }
+}
 
-
+function menuToggle() {
+    if (document.getElementById("menuToggle").src == "./assets/menu.svg") {
+        document.getElementById("menuToggle").src = "./assets/exit.svg";
+    } else {
+        document.getElementById("menuToggle").src = "./assets/menu.svg";
+    }
 }
