@@ -6,21 +6,21 @@
     <link href="./output.css" rel="stylesheet">
     <title>Melody Gannon's Portfolio</title>
 </head>
-<body class="bg-white dark:bg-darkBg flex flex-col min-h-screen grow">
+<body id="body" class="bg-white dark:bg-darkBg flex flex-col min-h-screen grow">
     <!-- Navbar code -->
     <nav id="menu" class="flex fixed top-0 w-full overflow-hidden bg-fill text-white dark:bg-darkAccent dark:text-darkText1 text-[22px] lg:h-9 h-15">
         <a href="#home" class="m-auto">
             <div class="lg:flex ml-4">Melody Gannon</div>
         </a>    
-        <div class="flex-1/3 ml-2 m-auto">
+        <div id="theme" class="flex-1/3 ml-2 m-auto">
             <svg class="stroke-white dark:stroke-darkText1" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M21 12.79C20.8427 14.4922 20.2039 16.1144 19.1582 17.4668C18.1126 18.8192 16.7035 19.8458 15.0957 20.4265C13.4879 21.0073 11.748 21.1181 10.0795 20.7461C8.41101 20.3741 6.88299 19.5345 5.67422 18.3258C4.46545 17.117 3.62593 15.589 3.2539 13.9205C2.88187 12.252 2.99271 10.5121 3.57345 8.9043C4.1542 7.29651 5.18082 5.88737 6.53321 4.84175C7.88559 3.79614 9.50779 3.15731 11.21 3C10.2134 4.34827 9.73384 6.00945 9.85852 7.68141C9.98321 9.35338 10.7039 10.9251 11.8894 12.1106C13.0749 13.2961 14.6466 14.0168 16.3186 14.1415C17.9905 14.2662 19.6517 13.7866 21 12.79Z" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path id="moon" d="M21 12.79C20.8427 14.4922 20.2039 16.1144 19.1582 17.4668C18.1126 18.8192 16.7035 19.8458 15.0957 20.4265C13.4879 21.0073 11.748 21.1181 10.0795 20.7461C8.41101 20.3741 6.88299 19.5345 5.67422 18.3258C4.46545 17.117 3.62593 15.589 3.2539 13.9205C2.88187 12.252 2.99271 10.5121 3.57345 8.9043C4.1542 7.29651 5.18082 5.88737 6.53321 4.84175C7.88559 3.79614 9.50779 3.15731 11.21 3C10.2134 4.34827 9.73384 6.00945 9.85852 7.68141C9.98321 9.35338 10.7039 10.9251 11.8894 12.1106C13.0749 13.2961 14.6466 14.0168 16.3186 14.1415C17.9905 14.2662 19.6517 13.7866 21 12.79Z" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
         </div>
         <!-- Menu button for mobile devices -->
         <button id="menuToggle" class="lg:hidden m-auto mr-4" onclick="menuClick()">
-            <svg id="menuButton" class="stroke-fill dark:stroke-darkText1" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 16H28M4 8H28M4 24H28" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <svg id="menuButtonSettings" class="stroke-white dark:stroke-darkText1" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path id="menuButton" d="M4 16H28M4 8H28M4 24H28" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
         </button>
         <div class="lg:flex hidden">
@@ -99,8 +99,10 @@
     <!-- Projects section -->
     <h1 id="projects" class="text-text dark:text-darkText2 text-5xl text-center pt-40">Projects</h1>
     <div>
-        <h1 class="text-text dark:text-darkText2 text-5xl text-center pt-40">Clairvoyance Task Manager</h1>
-        <img src="./assets/clairvoyancemain.png" class="max-w-300 m-auto border-text dark:border-darkText2 border-10 rounded-2xl mt-10 w-full h-auto object-cover">
+        <a href="https://github.com/meldevelopsthings/Clairvoyance">
+            <h1 class="text-text dark:text-darkText2 text-5xl text-center pt-40">Clairvoyance Task Manager</h1>
+            <img src="./assets/clairvoyancemain.png" class="max-w-300 m-auto border-text dark:border-darkText2 border-10 rounded-2xl mt-10 w-full h-auto object-cover">
+        </a>
         <div class="max-w-3/4 m-auto mt-20 bg-lilac dark:bg-darkAccent rounded-2xl text-center shadow-md">
             <p class="text-fill dark:text-darkText1 sm:text-[32px] text-2xl sm:p-10 p-6">Clairvoyance is a task management software that I designed for my university course. It is a web application made using a simple stack of HTML, Tailwind CSS, PHP and Javascript. The app uses a drag and drop functionality to allow for the sorting of tasks between multiple different lists at a time, under a kanban board view which can allow users to monitor their progress incrementally. <br><br> The main features are defined primarily by CRUD, allowing the user to interact with the app and its database through an authentication system. This system requires users to sign up to the app before they use it, but allows a lot of options for task management for anyone who does.</p>
         </div>
