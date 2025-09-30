@@ -16,16 +16,17 @@
     --text-5xl: 3rem;
     --text-5xl--line-height: 1;
     --radius-2xl: 1rem;
-    --animate-spin: spin 1s linear infinite;
-    --animate-bounce: bounce 1s infinite;
-    --default-transition-duration: 150ms;
-    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
     --color-text: #bba0ca;
     --color-fill: #272727;
     --color-lilac: #D1C8E1;
     --color-lightFill: #414141;
+    --color-darkBg: #48426D;
+    --color-darkText1: #F0C38E;
+    --color-darkText2: #F1AA9B;
+    --color-darkAccent: #312C51;
+    --color-darkFill: #453e72;
   }
 }
 @layer base {
@@ -240,9 +241,6 @@
   .inline-block {
     display: inline-block;
   }
-  .table {
-    display: table;
-  }
   .h-15 {
     height: calc(var(--spacing) * 15);
   }
@@ -261,47 +259,20 @@
   .w-full {
     width: 100%;
   }
-  .max-w-3 {
-    max-width: calc(var(--spacing) * 3);
-  }
   .max-w-3\/4 {
     max-width: calc(3/4 * 100%);
   }
   .max-w-300 {
     max-width: calc(var(--spacing) * 300);
   }
-  .flex-1 {
-    flex: 1;
-  }
   .flex-1\/3 {
     flex: calc(1/3 * 100%);
-  }
-  .flex-grow {
-    flex-grow: 1;
   }
   .grow {
     flex-grow: 1;
   }
-  .basis-1 {
-    flex-basis: calc(var(--spacing) * 1);
-  }
   .basis-1\/1 {
     flex-basis: calc(1/1 * 100%);
-  }
-  .border-collapse {
-    border-collapse: collapse;
-  }
-  .transform {
-    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
-  }
-  .animate-bounce {
-    animation: var(--animate-bounce);
-  }
-  .animate-spin {
-    animation: var(--animate-spin);
-  }
-  .resize {
-    resize: both;
   }
   .flex-col {
     flex-direction: column;
@@ -350,6 +321,12 @@
   .bg-white {
     background-color: var(--color-white);
   }
+  .stroke-fill {
+    stroke: var(--color-fill);
+  }
+  .stroke-white {
+    stroke: var(--color-white);
+  }
   .object-cover {
     object-fit: cover;
   }
@@ -394,35 +371,9 @@
   .text-white {
     color: var(--color-white);
   }
-  .underline {
-    text-decoration-line: underline;
-  }
   .shadow-md {
     --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-  .shadow-lightFill {
-    --tw-shadow-color: #414141;
-    @supports (color: color-mix(in lab, red, red)) {
-      --tw-shadow-color: color-mix(in oklab, var(--color-lightFill) var(--tw-shadow-alpha), transparent);
-    }
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
-  }
-  .transition-transform {
-    transition-property: transform, translate, scale, rotate;
-    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-    transition-duration: var(--tw-duration, var(--default-transition-duration));
-  }
-  .duration-100 {
-    --tw-duration: 100ms;
-    transition-duration: 100ms;
-  }
-  .duration-700 {
-    --tw-duration: 700ms;
-    transition-duration: 700ms;
   }
   .sm\:p-10 {
     @media (width >= 40rem) {
@@ -490,6 +441,41 @@
       padding-top: calc(var(--spacing) * 12);
     }
   }
+  .dark\:border-darkFill {
+    @media (prefers-color-scheme: dark) {
+      border-color: var(--color-darkFill);
+    }
+  }
+  .dark\:border-darkText2 {
+    @media (prefers-color-scheme: dark) {
+      border-color: var(--color-darkText2);
+    }
+  }
+  .dark\:bg-darkAccent {
+    @media (prefers-color-scheme: dark) {
+      background-color: var(--color-darkAccent);
+    }
+  }
+  .dark\:bg-darkBg {
+    @media (prefers-color-scheme: dark) {
+      background-color: var(--color-darkBg);
+    }
+  }
+  .dark\:stroke-darkText1 {
+    @media (prefers-color-scheme: dark) {
+      stroke: var(--color-darkText1);
+    }
+  }
+  .dark\:text-darkText1 {
+    @media (prefers-color-scheme: dark) {
+      color: var(--color-darkText1);
+    }
+  }
+  .dark\:text-darkText2 {
+    @media (prefers-color-scheme: dark) {
+      color: var(--color-darkText2);
+    }
+  }
 }
 @font-face {
   font-display: swap;
@@ -505,26 +491,6 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-}
-@property --tw-rotate-x {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-rotate-y {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-rotate-z {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-skew-x {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-skew-y {
-  syntax: "*";
-  inherits: false;
 }
 @property --tw-border-style {
   syntax: "*";
@@ -596,38 +562,9 @@
   inherits: false;
   initial-value: 0 0 #0000;
 }
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
-@property --tw-duration {
-  syntax: "*";
-  inherits: false;
-}
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(-25%);
-    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
-  }
-  50% {
-    transform: none;
-    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  }
-}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
-      --tw-rotate-x: initial;
-      --tw-rotate-y: initial;
-      --tw-rotate-z: initial;
-      --tw-skew-x: initial;
-      --tw-skew-y: initial;
       --tw-border-style: solid;
       --tw-shadow: 0 0 #0000;
       --tw-shadow-color: initial;
@@ -643,8 +580,6 @@
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
-      --tw-outline-style: solid;
-      --tw-duration: initial;
     }
   }
 }

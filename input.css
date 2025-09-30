@@ -14,6 +14,11 @@
     --color-white: #F4F4F5;
     --color-lilac: #D1C8E1;
     --color-lightFill: #414141;
+    --color-darkBg: #48426D;
+    --color-darkText1: #F0C38E;
+    --color-darkText2: #F1AA9B;
+    --color-darkAccent: #312C51;
+    --color-darkFill: #453e72;
     --breakpoint-lg: 70rem;
 }
 
